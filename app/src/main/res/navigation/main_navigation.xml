@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/displayUserFragment">
+
+    <fragment
+        android:id="@+id/displayUserFragment"
+        android:name="com.valuelab.photoapp.ui.main.DisplayUsersFragment"
+        android:label="display_user_fragment"
+        tools:layout="@layout/display_users_fragment">
+        <action
+            android:id="@+id/action_displayUserFragment_to_displayUserAlbumsFragment"
+            app:destination="@id/displayUserAlbumsFragment">
+            <argument
+                android:name="userId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/displayUserAlbumsFragment"
+        android:name="com.valuelab.photoapp.ui.main.DisplayUserAlbumsFragment"
+        android:label="display_user_albums_fragment"
+        tools:layout="@layout/display_user_albums_fragment">
+        <action
+            android:id="@+id/action_displayUserAlbumsFragment_to_displayUserPhotosFragment2"
+            app:destination="@id/displayUserPhotosFragment">
+            <argument
+                android:name="albumId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/displayUserPhotosFragment"
+        android:name="com.valuelab.photoapp.ui.main.DisplayUserPhotosFragment"
+        android:label="DisplayUserPhotosFragment" />
+</navigation>

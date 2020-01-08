@@ -1,0 +1,55 @@
+buildscript {
+
+    // Defines all libraries versions
+    ext {
+        // Sdk and tools
+        compileSdkVersion = 29
+        buildToolsVersion = "29.0.2"
+        minSdkVersion = 21
+        targetSdkVersion = 29
+        versionCode = 1
+        versionName = "1.0"
+        kotlinVersion = '1.3.60'
+        navigationSafe = '2.2.0-rc01'
+        buildGradleVersion = "3.5.2"
+
+        // App dependencies
+        glide = "4.10.0"
+        daggerVersion = "2.23.2"
+        liveData = "2.1.0"
+        navigationFragmentKtx = "2.2.0-rc02"
+        playServices = "17.0.0"
+        coroutinesAndroid = "1.3.0"
+        retrofit = "2.6.0"
+        gsonConverter = "2.6.0"
+        legacySupport = "1.0.0"
+        appCompact = "1.0.0"
+        coreKtx = "1.1.0"
+        constraintLayout = "1.1.3"
+        kotlinVersion = "1.3.60"
+
+    }
+
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$buildGradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationSafe"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PhotoApp</string>
+    <string name="network_not_available">Limited or no connectivity to internet. Try Again.</string>
+</resources>
